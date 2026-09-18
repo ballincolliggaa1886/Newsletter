@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ballincollig GAA Newsletter – Week 38, 2026</title>
+<style>
+  :root {
+    --green: #1b5e20;
+    --green-mid: #2e7d32;
+    --gold: #f9a825;
+    --text: #212121;
+    --muted: #555;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: var(--text); line-height: 1.65; }
+  a { color: var(--green-mid); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 12px 40px; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; gap: 20px; padding: 24px 20px;
+    border-radius: 0 0 12px 12px;
+  }
+  .hero-text { color: #fff; }
+  .hero-text h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+  .hero-text .tagline { font-size: 0.9rem; opacity: 0.85; margin-bottom: 10px; font-style: italic; }
+  .header-badge {
+    display: inline-block; background: #fff; color: var(--green);
+    font-size: 0.82rem; font-weight: 700; padding: 3px 12px; border-radius: 20px;
+  }
+
+  .sec-head {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+    color: #fff; padding: 10px 18px; border-radius: 8px;
+    font-size: 1.05rem; font-weight: 700; margin: 28px 0 16px; letter-spacing: 0.02em;
+  }
+  .sec-head.gold-head { background: linear-gradient(135deg, var(--gold) 0%, #e8a317 100%); color: var(--green); }
+
+  .card {
+    background: #fff; border-radius: 10px; padding: 18px 20px;
+    margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); line-height: 1.8;
+  }
+  .card p { margin-bottom: 10px; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { margin: 8px 0 12px 22px; }
+  .card li { margin-bottom: 5px; }
+  .card h3 { font-size: 1rem; color: var(--green); margin: 14px 0 6px; }
+
+  .champ-box {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+    color: #fff; border-radius: 10px; padding: 16px 20px; margin: 14px 0;
+    font-size: 0.97rem; line-height: 1.8;
+  }
+  .champ-box .champ-item { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
+  .champ-box .champ-day { font-weight: 700; min-width: 80px; color: var(--gold); }
+  .champ-box .champ-team { flex: 1; }
+
+  .notice-blue {
+    border-left: 4px solid #1565c0; background: #e3f2fd;
+    border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0;
+    font-size: 0.95rem; line-height: 1.75;
+  }
+  .notice-blue h3 { color: #1565c0; font-size: 1rem; margin-bottom: 6px; }
+  .notice-blue a { color: #1565c0; }
+
+  .notice-maroon {
+    border-left: 4px solid #880e4f; background: #fce4ec;
+    border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0;
+    font-size: 0.95rem; line-height: 1.75;
+  }
+  .notice-maroon h3 { color: #880e4f; font-size: 1rem; margin-bottom: 6px; }
+
+  .tagline-strip {
+    background: var(--green); color: #fff; text-align: center;
+    font-size: 0.85rem; font-style: italic; padding: 8px 16px;
+    border-radius: 8px; margin: 20px 0; opacity: 0.9;
+  }
+
+  .img-full      { width: 100%; margin: 14px 0; border-radius: 8px; display: block; }
+  .img-center    { display: block; margin: 14px auto; max-width: 480px; width: 100%; border-radius: 8px; }
+  .img-sm-center { display: block; margin: 10px auto; max-width: 320px; width: 100%; border-radius: 8px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+  .grid-2 img { width: 100%; height: auto; border-radius: 6px; object-fit: cover; }
+
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+  .grid-3 img { width: 100%; border-radius: 6px; object-fit: cover; aspect-ratio: 3/4; }
+
+  .footer {
+    text-align: center; font-size: 0.8rem; color: #888;
+    padding: 20px 0 10px; border-top: 2px solid var(--green); margin-top: 40px;
+  }
+
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 560px) {
+    .hero-text h1 { font-size: 1.25rem; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .champ-box .champ-day { min-width: 64px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Ballincollig GAA Club</h1>
+      <p class="tagline">Community &middot; Sport &middot; Tradition</p>
+      <span class="header-badge">Week 38 &middot; Fri 18th September 2026</span>
+    </div>
+  </header>
+
+  <div class="reveal">
+    <img src="images/image5.png" class="img-full" style="margin-top:16px;" alt="Ballincollig GAA Club banner">
+  </div>
+
+  <!-- CHAIRMAN'S MESSAGE -->
+  <div class="sec-head reveal">Chairman's Message</div>
+  <div class="card reveal">
+    <p><strong>Dear fellow Members, Players, Parents, and Supporters,</strong></p>
+
+    <h3>Championship Week: One Club, One Community, One Goal 💚🤍</h3>
+    <p>As we continue our journey towards building a stronger <strong>One Club</strong>, this week presents a fantastic opportunity to bring that vision to life. Across football, hurling, camogie and LGFA, <strong>six Ballincollig teams will take to the field</strong> in some of the biggest games of their season. It is a week that showcases the strength, talent and commitment that exists across our club. More importantly, it is a chance for us all to come together and support each other as one Ballincollig family.</p>
+
+    <div class="champ-box reveal">
+      <div class="champ-item">
+        <span class="champ-day">Tonight (Fri)</span>
+        <span class="champ-team"><strong>U16 Camogie</strong> — Championship fixture vs Midleton (away)</span>
+      </div>
+      <div class="champ-item">
+        <span class="champ-day">Sunday</span>
+        <span class="champ-team"><strong>U14 Hurlers</strong> — Championship Final in Blarney</span>
+      </div>
+      <div class="champ-item">
+        <span class="champ-day">Sunday</span>
+        <span class="champ-team"><strong>LGFA J1</strong> — County Semi-Final at home in Ballincollig</span>
+      </div>
+      <div class="champ-item">
+        <span class="champ-day">Sunday</span>
+        <span class="champ-team"><strong>U14 Camogie</strong> — Championship fixture vs Watergrasshill (away)</span>
+      </div>
+      <div class="champ-item">
+        <span class="champ-day">Monday</span>
+        <span class="champ-team"><strong>Premier 1 Minor Footballers</strong> — County Final at Páirc Uí Rinn 🏆 <em>Chasing an incredible three-in-a-row!</em></span>
+      </div>
+      <div class="champ-item">
+        <span class="champ-day">Thursday</span>
+        <span class="champ-team"><strong>U16 Footballers</strong> — County Final in Bishopstown 🏆</span>
+      </div>
+    </div>
+
+    <p>The excitement gets underway <strong>this evening</strong> as our <strong>Under 16 Camogie</strong> team travel to Midleton. <strong>Sunday</strong> promises to be a huge day, with our <strong>U14 Hurlers</strong> in a Championship Final in Blarney, our <strong>LGFA J1</strong> team battling for a place in the county final at home, and our <strong>U14 Camogie</strong> team in action in Watergrasshill.</p>
+    <p>The excitement continues on <strong>Monday</strong> as our <strong>Premier 1 Minor Footballers</strong> take centre stage in Páirc Uí Rinn for their County Final, <strong>chasing an incredible three-in-a-row of Premier 1 County titles</strong>. Opportunities to achieve something this special do not come around often. This outstanding group has earned its place on the biggest stage through dedication, sacrifice and relentless hard work, and now has the chance to write another memorable chapter in Ballincollig history. <strong>Let's fill Páirc Uí Rinn with green and white!</strong></p>
+    <p>The week concludes on <strong>Thursday</strong> when our <strong>Under 16 Footballers</strong> take to the field in their County Final in Bishopstown. After a tremendous season, they too stand on the brink of something special.</p>
+    <p>Behind every one of these teams are countless training sessions, early mornings, late evenings, dedicated coaches, supportive families and players who proudly wear the Ballincollig jersey. They have all made sacrifices to reach these occasions and now deserve the full backing of the club.</p>
+    <p>Let's create a championship atmosphere that reflects everything that is great about our club. Let's show what <strong>One Club</strong> means in action.</p>
+    <p style="font-size:1.05rem; font-weight:700; text-align:center; color:var(--green); margin-top:12px;">Six Teams. Six Huge Occasions. One Ballincollig. 💚🤍</p>
+    <p><strong>Le meas,<br>Tom Dorgan<br>Chairman, Ballincollig GAA Club</strong></p>
+  </div>
+
+  <div class="tagline-strip reveal">Ballincollig GAA is built on volunteerism, and every contribution — big or small — helps ensure the long&#8209;term success of our club</div>
+
+  <!-- JUVENILE CHAMPIONSHIP FINALS -->
+  <div class="sec-head gold-head reveal">🏆 Juvenile Championship Finals This Week!</div>
+  <div class="card reveal">
+    <img src="images/image6.jpeg" class="img-full reveal" alt="Juvenile Championship Finals">
+  </div>
+
+  <!-- ADULT CHAMPIONSHIP -->
+  <div class="sec-head reveal">Adult Championships – Continues This Weekend!</div>
+  <div class="card reveal">
+    <p>Please get out and support our teams this weekend!</p>
+    <img src="images/image7.jpeg" class="img-full reveal" alt="Adult Championship fixtures">
+    <img src="images/image8.png" class="img-full reveal" alt="Championship schedule">
+    <img src="images/image9.png" class="img-full reveal" alt="Championship schedule">
+  </div>
+
+  <!-- JUVENILE FIXTURES -->
+  <div class="sec-head reveal">Juvenile Fixtures</div>
+  <div class="card reveal">
+    <img src="images/image10.jpeg" class="img-full reveal" alt="Juvenile Fixtures">
+  </div>
+
+  <!-- CAMOGIE FIXTURES -->
+  <div class="sec-head reveal">Camogie Fixtures</div>
+  <div class="card reveal">
+    <img src="images/image11.jpeg" class="img-full reveal" alt="Camogie Fixtures">
+  </div>
+
+  <!-- COFFEE MORNING FOR MARYMOUNT -->
+  <div class="notice-maroon reveal">
+    <h3>☕ Coffee Morning for Marymount Hospice</h3>
+    <p><strong>Thursday, 24th September &nbsp;|&nbsp; 9:30am – 2pm</strong><br>
+    Ballincollig GAA Club</p>
+    <p>Please share &amp; please support this wonderful cause!</p>
+    <img src="images/image15.jpeg" class="img-full reveal" alt="Coffee Morning for Marymount Hospice">
+  </div>
+
+  <!-- GLÓR NA NÓG – LAST CHANCE! -->
+  <div class="sec-head gold-head reveal">⏰ Glór na nÓg 2026 – Closing September 21st!</div>
+  <div class="card reveal">
+    <p><strong>Last chance!</strong> Glór na nÓg closes on <strong>September 21st</strong>. The GAA and Amazon are teaming up for a <strong>€100,000 Community Funding Initiative</strong> — members aged <strong>10–18</strong> can tell us which GAA players inspire them.</p>
+    <p>Get involved at <a href="https://gaa.ie/glornanog" target="_blank">gaa.ie/glornanog</a></p>
+    <img src="images/image19.jpeg" class="img-center reveal" alt="Glór na nÓg 2026">
+  </div>
+
+  <!-- CORK GAA / TUITION CENTRE -->
+  <div class="notice-blue reveal">
+    <h3>📚 Cork GAA &amp; The Tuition Centre Partnership</h3>
+    <p>Cork GAA are delighted to partner with <strong>The Tuition Centre</strong> for the 2026–2027 academic year. Players receive <strong>Free Access to on-demand Maths lessons</strong> from 1st to 6th year plus significant discounts on Leaving Cert and Junior Cycle grinds.</p>
+    <p>Contact <a href="mailto:andrea@thetuitioncentre.ie">andrea@thetuitioncentre.ie</a> or <strong>01 5311005</strong> for assistance.</p>
+    <img src="images/image20.png" class="img-center reveal" alt="Cork GAA – The Tuition Centre">
+  </div>
+
+  <!-- CLUB PHOTOS -->
+  <div class="grid-3 reveal" style="margin: 14px 0;">
+    <img src="images/image21.jpeg" alt="Club photo">
+    <img src="images/image22.jpeg" alt="Club photo">
+    <img src="images/image23.jpeg" alt="Club photo">
+  </div>
+
+  <!-- HEALTHY CLUB – IRISH LIFE -->
+  <div class="notice-blue reveal">
+    <h3>💚 Healthy Club – Irish Life GAA Healthy Habits</h3>
+    <p><strong>Win €100 for yourself and €1,000 for your local GAA club!</strong> Join <strong>Healthy Habits</strong>, a FREE 4-week wellbeing programme for GAA Volunteers focused on Healthy Eating, Mental Fitness and Physical Activity.</p>
+    <p>Visit <a href="https://www.irishlife.ie/healthyhabits" target="_blank">irishlife.ie/healthyhabits</a> for details. Terms and conditions apply.</p>
+    <img src="images/image28.png" class="img-center reveal" alt="Irish Life GAA Healthy Habits">
+  </div>
+
+  <!-- LOTTO -->
+  <div class="sec-head reveal">☘️ Lotto – Jackpot Now at €20,000! 💶</div>
+  <div class="card reveal">
+    <img src="images/image29.jpeg" class="img-center reveal" alt="Lotto graphic">
+    <h3>Lotto Results</h3>
+    <img src="images/image30.png" class="img-center reveal" alt="Lotto results">
+  </div>
+
+  <!-- CLUB SHOP -->
+  <div class="sec-head reveal">O'Neill's Ballincollig Online Club Shop</div>
+  <div class="card reveal">
+    <p><strong>NOW OPEN!! #upthevillage</strong></p>
+    <img src="images/image31.jpeg" class="img-center reveal" alt="Club Shop">
+    <p><a href="https://www.oneills.com/shop-by-team/gaa/ireland/ballincollig-gaa.html" target="_blank">www.oneills.com – Ballincollig GAA Shop</a></p>
+  </div>
+
+  <!-- IMPORTANT NOTICES -->
+  <div class="notice-blue reveal">
+    <h3>⚠️ Important Notices – Heated Defibrillators</h3>
+    <p>(located beside Pitch 1 &amp; Pitch 2)</p>
+    <p>Code for access is <strong>C1886</strong></p>
+  </div>
+
+  <!-- CLUBZAP -->
+  <div class="sec-head reveal">CLUBZAP – Stay Connected</div>
+  <div class="card reveal">
+    <p>Stay up to date with all things Ballincollig GAA, LGFA and Camogie.</p>
+    <img src="images/image32.png" class="img-center reveal" alt="ClubZap logo">
+    <img src="images/image33.jpg" class="img-center reveal" alt="ClubZap app">
+    <p style="text-align:center;"><a href="#" target="_blank">Download App here</a></p>
+  </div>
+
+  <!-- CLUB PAVILION -->
+  <div class="sec-head reveal">Club Pavilion – What's On!</div>
+  <div class="card reveal">
+    <img src="images/image34.png" class="img-full reveal" alt="Club Pavilion What's On schedule">
+    <p><strong>Social Dancing</strong> (Every Wed) &amp; <strong>45 Drive Cards</strong> (Every Thurs) &amp; <strong>Bingo is back!</strong> (every Friday)</p>
+    <img src="images/image35.png" class="img-full reveal" alt="Club Pavilion events">
+    <img src="images/image36.png" class="img-full reveal" alt="Club Pavilion">
+  </div>
+
+  <!-- HEALTHY CLUB – MYMIND -->
+  <div class="notice-blue reveal">
+    <h3>💚 Healthy Club – Free Therapy for Men</h3>
+    <p>MyMind in partnership with the HSE, is offering six free counselling sessions to men aged 18+ living in Ireland experiencing mild to moderate mental health challenges. Available through self-referral — no GP referral required.</p>
+    <p>Register at <a href="https://mymind.org/free-therapy-for-men" target="_blank">mymind.org/free-therapy-for-men</a></p>
+    <img src="images/image37.jpeg" class="img-full reveal" alt="Healthy Club">
+    <img src="images/image38.png" class="img-center reveal" alt="Healthy Club notice">
+  </div>
+
+  <!-- LOCAL PARTNERS -->
+  <div class="sec-head reveal">Support Our Local Partners</div>
+  <div class="card reveal">
+    <p><strong>Perked Up Coffee &amp; Sauna Snugg</strong></p>
+    <div class="grid-2 reveal">
+      <img src="images/image39.png" alt="Perked Up Coffee">
+      <img src="images/image40.jpeg" alt="Sauna Snugg">
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Keep well, Ballincollig GAA Family &amp; Friends &nbsp;|&nbsp; Tom 2026 #35</p>
+    <p style="margin-top:6px;">Ballincollig GAA Club</p>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
